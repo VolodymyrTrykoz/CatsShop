@@ -1,0 +1,89 @@
+{
+	"cats": [
+		{
+			"name": "Vasyka",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Petka",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Murzik",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Ryzhyk",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Bob",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Stenly",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Ronny",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Monika",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Murka",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Simona",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Sara",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		},
+		{
+			"name": "Jesika",
+			"category": "fast",
+			"price": 100,
+			"img_url" : "https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/495636.svg",
+			"is_available": true
+		}
+
+	]
+} 
