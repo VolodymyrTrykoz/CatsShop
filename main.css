@@ -21,20 +21,7 @@ table {
 }
 
 
-.policy__list {
-	list-style-type: none;
-	text-align: right;
-}
 
-
-.policy__item {
-	display: inline-block;
-	padding-right: 10px;
-}
-
-.policy__item:last-child {
-	padding-right: 0;
-}
 
 .menu {
 	background-color: #a8d5d1;
