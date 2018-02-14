@@ -153,3 +153,32 @@ figcaption  span {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+
+
+.square {
+	width: 30rem;
+	height: 20rem;
+	background: green;
+	margin: 0 auto;  
+}	
+
+
+.squareChanged {
+	background: purple;
+}
+
+
+
+
+
+
+
+
+
+
+.green {
+	width: 100px;
+	height: 100px;
+	background: green;
+}
