@@ -4,7 +4,7 @@ var btn = document.querySelector('.btn');
 var tmpl = document.getElementById('tmpl');
 var count = 1;
 var color = ['#f274e9', '#42a1a1', '#fef192', '#ff9c62', '#e7ff62', '#63c7d7', '#b89ed9', '#ffb4f2'];
-
+var cacheRandom = null;
 
 
 window.addEventListener('scroll', function(){
@@ -12,7 +12,7 @@ window.addEventListener('scroll', function(){
             
           var request = new XMLHttpRequest();
           request.open('GET', 'https://ma-cats-api.herokuapp.com/api/cats?page=' + count + '&per_page=20', true);
-            
+
           request.onload = function() {
 
             if (request.status >= 200 && request.status < 400) {
@@ -24,17 +24,12 @@ window.addEventListener('scroll', function(){
 
               var figure = document.querySelectorAll('figure');
               
-
-              for( i = 0; i < figure.length; i++){
-                  figure[i].style.background = color[getRandomInt(0, 7)]
+              //picking random bg color for figure from global COLOR variable
+              for(i = 0; i < figure.length; i++){
+                  figure[i].style.background = color[randomizer(0, 7)];
+                  console.log(color[randomizer(0, 7)]);
               }
-
-              function getRandomInt(min, max) {
-                  return Math.floor(Math.random() * (max - min + 1)) + min;
-              }
-
-              count++;  
-
+       
             } else {
               // We reached our target server, but it returned an error
 
@@ -66,9 +61,20 @@ window.addEventListener('scroll', function(){
             }
           } 
 
+          function randomizer(a, b) {
+            let random = Math.random() * (b - a);
+            random = Math.floor(random) + a;
+            if (random != cacheRandom) {
+                cacheRandom = random;
+                return random;
+            } else {
+                return randomizer(a, b);
+            }
+          }
+
       }
 
-     
+  count++;   
      
 });
 
