@@ -108,7 +108,7 @@ button.btn {
 }
 
 figure {
-	background: pink;
+	
 	cursor: pointer;
 	border-radius: 10px;
 	transition: 0.5s all;
@@ -157,26 +157,3 @@ figcaption  span {
 	transition: 0.5s all;
 }
 
-
-
-
-
-.square {
-	width: 30rem;
-	height: 20rem;
-	background: green;
-	margin: 0 auto;  
-}	
-
-
-.squareChanged {
-	background: purple;
-}
-
-
-
-.green {
-	width: 100px;
-	height: 100px;
-	background: green;
-}
