@@ -60,7 +60,9 @@ window.addEventListener('scroll', function(){
         span[1].innerHTML = cat.category;
         span[2].innerHTML = cat.available; 
         price.innerHTML = 'Price ' + cat.price;
-        img.src= innerHTML = cat.img_url; 
+
+        img.src= cat.img_url; 
+
         figure.style.background = color[randomizer(0, 7)];
         
         tmpl.parentNode.appendChild(clone);
