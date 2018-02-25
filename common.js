@@ -102,22 +102,22 @@ function showCats(){
 
 
 function cartProductsCounter(){
+var counter = 0;
 var products = document.querySelectorAll('.product__item');  
 var item = document.querySelector('.cart__number');
-var counter = 0;
+
 
   for(var i = 0; i < products.length; i++){
     products[i].onclick =  function countItems(){
         counter++;
         item.innerHTML = counter;
         
+        
     };
    
   }
-    var newCounter = countItems;
-    console.log(newCounter);
    
-
-
-  
+console.log(counter); 
+   
 }
+
