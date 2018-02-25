@@ -1,8 +1,19 @@
+
+:root {
+	--color-main: #a8d5d1;
+	--color-secondary: #e5f6f5;
+	--delay-global: 300ms;
+}
+
 html, body, h2 {
 	margin: 0;
 	padding: 0;
-	background: #d5ede1;
 	
+}
+
+
+body {
+	background: var(--color-secondary);
 }
 
 table {
@@ -19,12 +30,13 @@ table {
 .header {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	
+	
 }
 
 
 
 .menu {
-	background-color: #a8d5d1;
+	background-color: var(--color-main);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -59,7 +71,7 @@ button {
 	background-color: #bae6eb;
 	border-radius: 10px;
 	border: none;
-}
+} 
 button.btn {
 	display: block;
 	margin: 10px auto;
@@ -86,11 +98,14 @@ button.btn {
 	width: 25px;
 }
 
-.number {
+
+.cart__number {
 	position: absolute;
 	top: 30px;
 	right: -15px;
-	padding: 15px;
+	width: 30px;
+    height: 30px;
+    line-height: 30px;
 	border-radius: 50%;
 	background: #85b8ad;
 }
@@ -111,15 +126,22 @@ figure {
 	
 	cursor: pointer;
 	border-radius: 10px;
-	transition: 0.5s all;
 	position: relative;
-	
+		
+}
+
+figure img {
+	transition: 0.1s linear ;
 }
 
 
 figure:hover {
 	background: #d5ede1;
-	transition: 0.5s all;
+	
+}
+
+figure:hover img {
+	transform: scale(1.05);
 }
 
 figure:hover figcaption {

@@ -1,13 +1,20 @@
-var product = document.querySelector('.product');
+
 var btn = document.querySelector('.btn');
 var tmpl = document.getElementById('tmpl');
 var count = 1;
 var color = ['#f274e9', '#42a1a1', '#fef192', '#ff9c62', '#e7ff62', '#63c7d7', '#b89ed9', '#ffb4f2'];
 var cacheRandom = null;
-let successRequest = true;
+var successRequest = true;
 
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', showCats);
+btn.addEventListener('click', showCats);
+
+
+
+
+
+function showCats(){
   if (!successRequest) {
     return;
   }
@@ -24,6 +31,7 @@ window.addEventListener('scroll', function(){
         var data = JSON.parse(request.responseText);
 
         renderHTML(data);
+        cartProductsCounter();
 
         var figure = document.querySelectorAll('figure');
         
@@ -83,4 +91,33 @@ window.addEventListener('scroll', function(){
     
     count++;   
   }
-});
+
+}
+
+
+
+
+
+
+
+
+function cartProductsCounter(){
+var products = document.querySelectorAll('.product__item');  
+var item = document.querySelector('.cart__number');
+var counter = 0;
+
+  for(var i = 0; i < products.length; i++){
+    products[i].onclick =  function countItems(){
+        counter++;
+        item.innerHTML = counter;
+        
+    };
+   
+  }
+    var newCounter = countItems;
+    console.log(newCounter);
+   
+
+
+  
+}
