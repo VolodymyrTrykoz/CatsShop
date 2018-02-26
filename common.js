@@ -1,7 +1,7 @@
 
 var btn = document.querySelector('.btn');
 var tmpl = document.getElementById('tmpl');
-var count = 1;
+var pageCounter = 1;
 var color = ['#f274e9', '#42a1a1', '#fef192', '#ff9c62', '#e7ff62', '#63c7d7', '#b89ed9', '#ffb4f2'];
 var cacheRandom = null;
 var successRequest = true;
@@ -21,7 +21,7 @@ function showCats(){
   if (window.scrollY + window.innerHeight >  btn.offsetTop){
     successRequest = false;
     var request = new XMLHttpRequest();
-    request.open('GET', 'https://ma-cats-api.herokuapp.com/api/cats?page=' + count + '&per_page=20', true);
+    request.open('GET', 'https://ma-cats-api.herokuapp.com/api/cats?page=' + pageCounter + '&per_page=20', true);
     
     request.onload = function() {
       
@@ -34,12 +34,6 @@ function showCats(){
         cartProductsCounter();
 
         var figure = document.querySelectorAll('figure');
-        
-        //picking random bg color for figure from global COLOR variable
-        // for(i = 0; i < figure.length; i++){
-        //     figure[i].style.background = color[randomizer(0, 7)];
-        //     console.log(color[randomizer(0, 7)]);
-        // }
   
       } else {
         // We reached our target server, but it returned an error
@@ -89,35 +83,82 @@ function showCats(){
       }
     }
     
-    count++;   
+    pageCounter++;   
   }
 
 }
 
 
-
-
+var cartCounter = 0;
 
 
 
 
 function cartProductsCounter(){
-var counter = 0;
-var products = document.querySelectorAll('.product__item');  
-var item = document.querySelector('.cart__number');
-
+  var products = document.querySelectorAll('.product__item img');  
+  
 
   for(var i = 0; i < products.length; i++){
-    products[i].onclick =  function countItems(){
-        counter++;
-        item.innerHTML = counter;
-        
-        
-    };
-   
-  }
-   
-console.log(counter); 
+    products[i].addEventListener('click', increaseCartItems);
+  }  
+   function increaseCartItems(){
+        var item = document.querySelector('.cart__number');
+        cartCounter++;
+        item.innerHTML = cartCounter;                
+    }; 
    
 }
 
+    
+var plus = document.querySelector('.btn1');
+plus.addEventListener('click', increaseCartItems);
+
+   function increaseCartItems(){
+        var item = document.querySelector('.cart__number');
+        cartCounter++;
+        item.innerHTML = cartCounter;                
+    }; 
+
+
+
+var minus = document.querySelector('.btn2');
+minus.addEventListener('click', decreaseCartItems);
+
+   function decreaseCartItems(){
+        var item = document.querySelector('.cart__number');
+        cartCounter--;
+        item.innerHTML = cartCounter;                
+    }; 
+console.log(cartCounter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var cat = document.querySelector('.product__item');
+console.log(cat);
+cat.addEventListener('click', callback);
+
+function callback(event) {
+  let currentCat = event.currentTarget;
+  console.log(currentCat);
+}
